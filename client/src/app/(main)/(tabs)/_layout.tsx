@@ -7,9 +7,9 @@ import {
 } from "@/src/constants/icons";
 import { cn } from "@/src/lib/utils";
 import { Tabs, usePathname } from "expo-router";
+import { Plus, User } from "lucide-react-native";
 import React from "react";
 import { Pressable, View } from "react-native";
-import { Plus, User } from "lucide-react-native";
 
 const NoRippleTabButton = (props: any) => (
   <Pressable
@@ -35,8 +35,18 @@ const TabsLayout = () => {
         tabBarStyle: {
           height: 70,
           paddingTop: 15,
+          backgroundColor: "white",
           borderTopRightRadius: 30,
           borderTopLeftRadius: 35,
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          elevation: 5,
+          shadowColor: "#000",
+          shadowOpacity: 0.05,
+          shadowRadius: 5,
+          shadowOffset: { width: 0, height: -2 },
         },
       }}
     >
@@ -46,8 +56,8 @@ const TabsLayout = () => {
           tabBarIcon: () => (
             <View
               className={cn(
-                "w-14 h-14 rounded-full items-center justify-center",
-                url === "home" ? "bg-black/5" : "bg-white"
+                "h-14 w-14 items-center justify-center rounded-full",
+                url === "home" ? "bg-black/5" : "bg-white",
               )}
             >
               {url === "home" ? (
@@ -65,8 +75,8 @@ const TabsLayout = () => {
           tabBarIcon: () => (
             <View
               className={cn(
-                "w-14 h-14 rounded-full items-center justify-center",
-                url === "explore" ? "bg-black/5" : "bg-white"
+                "h-14 w-14 items-center justify-center rounded-full",
+                url === "explore" ? "bg-black/5" : "bg-white",
               )}
             >
               {url === "explore" ? (
@@ -87,7 +97,7 @@ const TabsLayout = () => {
         name="create"
         options={{
           tabBarIcon: () => (
-            <View className="size-14 bg-black rounded-full items-center justify-center">
+            <View className="size-14 items-center justify-center rounded-full bg-black">
               <Plus color="white" />
             </View>
           ),
@@ -99,8 +109,8 @@ const TabsLayout = () => {
           tabBarIcon: () => (
             <View
               className={cn(
-                "w-14 h-14 rounded-full items-center justify-center",
-                url === "reels" ? "bg-black/5" : "bg-white"
+                "h-14 w-14 items-center justify-center rounded-full",
+                url === "reels" ? "bg-black/5" : "bg-white",
               )}
             >
               {url === "reels" ? (
@@ -124,14 +134,19 @@ const TabsLayout = () => {
           tabBarIcon: () => (
             <View
               className={cn(
-                "w-14 h-14 rounded-full items-center justify-center",
-                url === "Aditya" ? "bg-black/5" : "bg-white"
+                "h-14 w-14 items-center justify-center rounded-full",
+                url === "Aditya" ? "bg-black/5" : "bg-white",
               )}
             >
               {url === "Aditya" ? (
                 <User fill={"black"} width={27} height={27} />
               ) : (
-                <User width={27} height={27} />
+                <User
+                  width={27}
+                  height={27}
+                  stroke={"black"}
+                  strokeWidth={1.6}
+                />
               )}
             </View>
           ),
