@@ -1,0 +1,11 @@
+# Ignore environment files in root (if added later)
+.env
+
+# Ignore log files
+*.log
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
