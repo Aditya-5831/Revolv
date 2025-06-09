@@ -26,7 +26,7 @@ const ListHeaderComponent = () => {
   return (
     <Pressable className="">
       <Image
-        source={require("@/assets/images/logo.png")}
+        source={require("@/assets/images/post-image.jpg")}
         className="h-48 w-36 rounded-3xl"
         alt="image"
       />
@@ -44,14 +44,16 @@ const RenderComponent = () => {
   return (
     <Pressable>
       <Image
-        source={require("@/assets/images/logo.png")}
+        source={require("@/assets/images/story-image.jpg")}
         className="h-48 w-36 rounded-3xl"
         alt="image"
       />
       <View className="absolute bottom-6 left-11 items-center gap-y-2">
-        <View className="size-14 items-center justify-center rounded-full bg-blue-600">
-          <Text className="text-2xl font-bold text-white">A</Text>
-        </View>
+        <Image
+          source={require("@/assets/images/logo.png")}
+          className="h-14 w-14 rounded-3xl"
+          alt="image"
+        />
         <Text className="font-semibold text-white">Arnold</Text>
       </View>
     </Pressable>
